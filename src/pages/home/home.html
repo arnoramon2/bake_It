@@ -1,11 +1,42 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
+
+    <ion-navbar color="bakeit1">
+      <ion-title><p ion-text color="bakeit3">Home</p></ion-title>
+    </ion-navbar>
+  
+  </ion-header>
 
 <ion-content padding>
-<h1>Welcome!</h1>
+  <div text-center>
+      <h1 class="bakeit3">Meest gekookt</h1>
+      <p class="bakeit2">Ondek hier de meeste gekookte gerechten van het moment!</p>
+  </div>
+<hr>
+<div padding-vertical></div>
+  <ion-list *ngFor="let item of gerechten">
+
+    <ion-grid>
+      <ion-row>
+        <ion-col col-3>
+            <img src="{{item.img}}" alt="Logo Bake It" class="rounded">
+        </ion-col>
+        <ion-col>
+          <div text-center>
+            <h1 ion-text color="bakeit3">{{item.naam}}</h1>
+            <p class="shorten" ion-text color="light">{{item.info}}
+              <p>
+          </div>
+        </ion-col>
+        <ion-col col-1>
+          <button ion-button clear (click)="detailGerecht(item)">
+            <ion-icon name="arrow-dropright-circle" color="bakeit3"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+<hr>
+  </ion-list>
+
+
+
 </ion-content>

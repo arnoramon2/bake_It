@@ -14,6 +14,8 @@ import { AngularFireAuth, AngularFireAuthModule } from 'angularfire2/auth';
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
+import { GerechtenProvider } from '../providers/gerechten/gerechten';
+import { GerechtDetailPage } from '../pages/gerecht-detail/gerecht-detail';
 
 var config = {
   apiKey: "AIzaSyDezIM2Jt9z91Nez9iNTZOm8mI6A6QYiTc",
@@ -31,7 +33,8 @@ var config = {
     MyApp,
     HomePage,
     LoginPage,
-    RegisterPage
+    RegisterPage,
+    GerechtDetailPage
   ],
   imports: [
     BrowserModule,
@@ -48,13 +51,16 @@ var config = {
     MyApp,
     HomePage,
     LoginPage,
-    RegisterPage
+    RegisterPage,
+    GerechtDetailPage
+    
   ],
   providers: [
     StatusBar,
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    AuthServiceProvider
+    AuthServiceProvider,
+    GerechtenProvider
   ]
 })
 export class AppModule { }
