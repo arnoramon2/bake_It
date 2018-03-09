@@ -1,34 +1,31 @@
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>register</ion-title>
+  <ion-navbar color="bakeit1">
+    <ion-title><p ion-text color="bakeit3">Register</p></ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-  <ion-list>
-
-
-    <ion-item>
-      <ion-label>Email</ion-label>
+<ion-content padding class="content">
+  <img src="../../assets/img/logo.png" alt="Logo Bake It">
+    <ion-item class="content">
+      <ion-label floating color="bakeit2"><ion-icon color="bakeit3" name="person"></ion-icon> E-mail</ion-label>
       <ion-input [(ngModel)]="user.email" type="email"></ion-input>
     </ion-item>
 
-    <ion-item>
-      <ion-label>Passwoord</ion-label>
+    <ion-item class="content">
+      <ion-label floating color="bakeit2"><ion-icon color="bakeit3" name="lock"></ion-icon> Paswoord</ion-label>
       <ion-input [(ngModel)]="user.password" type="password"></ion-input>
     </ion-item>
 
-    <ion-item>
-      <ion-label>Repeat asswoord</ion-label>
+    <ion-item class="content">
+      <ion-label floating color="bakeit2"><ion-icon color="bakeit3" name="lock"></ion-icon> Herhaal paswoord</ion-label>
       <ion-input [(ngModel)]="user.password2" type="password"></ion-input>
     </ion-item>
 
     <div padding>
-      <button ion-button full color="danger" (click)=register()>Register</button>
+      <button ion-button full color="bakeit2" (click)=register()>Register</button>
     </div>
 
-  </ion-list>
 </ion-content>

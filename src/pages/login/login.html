@@ -1,33 +1,34 @@
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>login</ion-title>
+  <ion-navbar color="bakeit1">
+    <ion-title><p ion-text color="bakeit3">Login</p></ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-  <ion-list>
+<ion-content padding class="content">
 
-    <ion-item>
-      <ion-label floating>Email</ion-label>
+    <img src="../../assets/img/logo.png" alt="Logo Bake It">
+    <ion-item class="content">
+      <ion-label floating color="bakeit2"> <ion-icon color="bakeit3" name="person"></ion-icon> E-mail</ion-label>
       <ion-input [(ngModel)]="user.email" type="text"></ion-input>
     </ion-item>
 
-    <ion-item>
-      <ion-label>password</ion-label>
+    <ion-item class="content">
+      <ion-label floating color="bakeit2"><ion-icon color="bakeit3" name="lock"></ion-icon> password</ion-label>
       <ion-input [(ngModel)]="user.password" type="password"></ion-input>
     </ion-item>
+    <div padding-vertical></div>
+    <button ion-button full color="bakeit2" (click)=login()>Log in</button>
 
-  </ion-list>
+    <div text-center>
+      <button ion-button clear color="bakeit2" (click)=register()>Or create an account</button>
+    </div>  
 
 
-  <button ion-button full color="danger" (click)=login()>Log in</button>
 
-  <div text-center>
-    <button ion-button full color="light" (click)=register()>Or create an account</button>
-  </div>
+
 
 
 

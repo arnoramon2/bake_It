@@ -1,3 +1,23 @@
 page-register {
 
 }
+
+.content {
+    background-color: map-get($colors , bakeit1 );
+}
+
+input {
+       color: map-get($colors, bakeit3 );
+}
+
+.back-button-icon-md {
+    color:map-get($colors, bakeit3 );
+  }
+
+  .back-button-icon-ios {
+    color:map-get($colors, bakeit3 );
+  }
+
+  .back-button-icon-wp {
+    color:map-get($colors, bakeit3 );
+  }
