@@ -7,11 +7,13 @@ import { HomePage } from '../pages/home/home';
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 import { LoginPage } from '../pages/login/login';
 import { ZoekenPage } from '../pages/zoeken/zoeken';
+import { ResultsPage } from '../pages/results/results';
+import { FavorietenPage } from '../pages/favorieten/favorieten';
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage: any = ZoekenPage;
+  rootPage: any = FavorietenPage;
 
   constructor(
     platform: Platform,

@@ -1,0 +1,44 @@
+<ion-header>
+
+    <ion-navbar color="bakeit1">
+      <ion-title><p ion-text color="bakeit3">Resultaten</p></ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+
+
+<ion-content padding class="content">
+  <div text-center>
+    <h1 class="bakeit3">Start het koken!</h1>
+    <p class="bakeit3">Op basis van je aangegeven ingrediënten hebben we volgende gerechten gevonden voor je..</p>
+    <div text-center>
+        <button ion-button clear color="bakeit2" (click)=zoeken()>Verander ingrediënten</button>
+      </div>  
+  </div>
+
+  <div padding-vertical></div>
+  <ion-list *ngFor="let item of gerechten">
+
+    <ion-grid>
+      <ion-row>
+        <ion-col col-3>
+            <img src="{{item.img}}" alt="Logo Bake It" class="rounded">
+        </ion-col>
+        <ion-col>
+          <div text-center>
+            <h1 ion-text color="bakeit3">{{item.naam}}</h1>
+            <p class="shorten" ion-text color="light">{{item.info}}
+              <p>
+          </div>
+        </ion-col>
+        <ion-col col-1>
+          <button ion-button clear (click)="detailGerecht(item)">
+            <ion-icon name="arrow-dropright-circle" color="bakeit3"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+<hr>
+  </ion-list>
+
+</ion-content>

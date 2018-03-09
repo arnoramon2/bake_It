@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ResultsPage } from '../results/results';
 
 /**
  * Generated class for the ZoekenPage page.
@@ -23,6 +24,11 @@ export class ZoekenPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ZoekenPage');
+  }
+
+
+  zoek() {
+    this.navCtrl.setRoot(ResultsPage);
   }
 
 }

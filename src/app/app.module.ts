@@ -17,6 +17,8 @@ import { RegisterPage } from '../pages/register/register';
 import { GerechtenProvider } from '../providers/gerechten/gerechten';
 import { GerechtDetailPage } from '../pages/gerecht-detail/gerecht-detail';
 import { ZoekenPage } from '../pages/zoeken/zoeken';
+import { ResultsPage } from '../pages/results/results';
+import { FavorietenPage } from '../pages/favorieten/favorieten';
 
 var config = {
   apiKey: "AIzaSyDezIM2Jt9z91Nez9iNTZOm8mI6A6QYiTc",
@@ -36,7 +38,10 @@ var config = {
     LoginPage,
     RegisterPage,
     GerechtDetailPage,
-    ZoekenPage
+    ZoekenPage,
+    ResultsPage,
+    FavorietenPage,
+    GerechtDetailPage
   ],
   imports: [
     BrowserModule,
@@ -55,7 +60,10 @@ var config = {
     LoginPage,
     RegisterPage,
     GerechtDetailPage,
-    ZoekenPage
+    ZoekenPage,
+    ResultsPage,
+    FavorietenPage,
+    GerechtDetailPage
   ],
   providers: [
     StatusBar,
