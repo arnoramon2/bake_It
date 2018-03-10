@@ -18,6 +18,8 @@ import { ZoekenPage } from '../zoeken/zoeken';
 })
 export class ResultsPage {
   gerechten : any;
+ 
+
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,

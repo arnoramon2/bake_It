@@ -10,13 +10,14 @@ import { ZoekenPage } from '../pages/zoeken/zoeken';
 import { ResultsPage } from '../pages/results/results';
 import { FavorietenPage } from '../pages/favorieten/favorieten';
 import { GerechtenPage } from '../pages/gerechten/gerechten';
+import { AccounttabsPage } from '../pages/accounttabs/accounttabs';
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
   
-  rootPage: any = HomePage;
+  rootPage: any = LoginPage;
 
   constructor(
     platform: Platform,
@@ -47,7 +48,7 @@ export class MyApp {
   }
 
   account() {
-    //this.nav.setRoot();
+    this.nav.setRoot(AccounttabsPage);
   }
 
   logout() {

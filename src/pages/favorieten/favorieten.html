@@ -9,14 +9,15 @@
   
   </ion-header>
 
-<ion-content padding>
+
+<ion-content padding class="content">
   <div text-center>
-      <h1 class="bakeit3">Je persoonlijke favorieten</h1>
+    <h1 class="bakeit3">Al je favoriete gerechten op één plaats!</h1>
   </div>
 
-<div padding-vertical></div>
-<hr>
+  <div padding-vertical></div>
   <ion-list *ngFor="let item of gerechten">
+
     <ion-grid>
       <ion-row>
         <ion-col col-3>
@@ -27,7 +28,6 @@
             <h1 ion-text color="bakeit3">{{item.naam}}</h1>
             <p class="shorten" ion-text color="light">{{item.info}}
               <p>
-                
           </div>
         </ion-col>
         <ion-col col-1>
@@ -39,7 +39,5 @@
     </ion-grid>
 <hr>
   </ion-list>
-
-
 
 </ion-content>

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { GerechtenProvider } from '../../providers/gerechten/gerechten';
+import { GerechtDetailPage } from '../gerecht-detail/gerecht-detail';
 
 /**
  * Generated class for the FavorietenPage page.
@@ -15,7 +16,7 @@ import { GerechtenProvider } from '../../providers/gerechten/gerechten';
   templateUrl: 'favorieten.html',
 })
 export class FavorietenPage {
-  gerechten : any;
+    gerechten: any;
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
@@ -26,6 +27,10 @@ export class FavorietenPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad FavorietenPage');
+  }
+
+  detailGerecht(item : any) {
+    this.navCtrl.push(GerechtDetailPage, item);
   }
 
 }
