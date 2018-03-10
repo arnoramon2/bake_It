@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { GerechtDetailPage } from '../gerecht-detail/gerecht-detail';
+import { ResultsPage } from '../results/results';
 
 /**
  * Generated class for the GerechtenPage page.
@@ -22,4 +24,7 @@ export class GerechtenPage {
     console.log('ionViewDidLoad GerechtenPage');
   }
 
+  result() {
+    this.navCtrl.push(ResultsPage);
+  }
 }

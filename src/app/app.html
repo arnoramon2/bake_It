@@ -1,1 +1,13 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="mainNav">
+    <ion-content>
+        <ion-list>
+            <ion-item class="content" menuClose (click)=home()><h2 ion-text color="bakeit3">Home</h2></ion-item>
+            <ion-item class="content" menuClose (click)="zoek()"><h2 ion-text color="bakeit3">Zoek gerechten</h2></ion-item>
+            <ion-item class="content" menuClose (click)="gerechten()"><h2 ion-text color="bakeit3">Gerechten</h2></ion-item>
+            <ion-item class="content" menuClose (click)="account()"><h2 ion-text color="bakeit3">Mijn account</h2></ion-item>
+            <ion-item class="content" menuClose (click)="logout()"><h2 ion-text color="bakeit3">Logout</h2></ion-item>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+
+<ion-nav #mainNav [root]="rootPage"></ion-nav>

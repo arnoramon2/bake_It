@@ -1,18 +1,45 @@
-<!--
-  Generated template for the GerechtenPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>gerechten</ion-title>
+  <ion-navbar color="bakeit1">
+    <button ion-button icon-only menuToggle start>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      <p ion-text color="bakeit3">Gerechten</p>
+    </ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="content">
+  <div text-center>
+    <h1 class="bakeit3">Kies een gerecht uit de lijst</h1>
+  </div>
+  <div padding-vertical></div>
+
+  <ion-list>
+
+    <button class="content" ion-item (click)=result()>
+      <h2 ion-text color="bakeit3">Pasta gerechten</h2>
+    </button>
+
+    <button class="content" ion-item (click)="result()">
+      <h2 ion-text color="bakeit3">Vlees gerechten</h2>
+    </button>
+
+    <button class="content" ion-item (click)="result()">
+      <h2 ion-text color="bakeit3"> Vis gerechten</h2>
+    </button>
+
+    <button class="content" ion-item (click)="result()">
+      <h2 ion-text color="bakeit3">Vegetarische gerechten</h2>
+    </button>
+
+    <button class="content" ion-item (click)="result()">
+      <h2 ion-text color="bakeit3">Vegan gerechten</h2>
+    </button>
+
+  </ion-list>
 
 </ion-content>

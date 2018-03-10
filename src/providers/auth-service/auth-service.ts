@@ -47,6 +47,10 @@ export class AuthServiceProvider {
     this.isLoggedIn = false
   }
 
+  //Logout funtie
+  logout() {
+    this.afAuth.auth.signOut();
+  }
 
 
   // Toast(error melding) functie
