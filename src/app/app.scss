@@ -14,3 +14,42 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+.content {
+    background-color: map-get($colors , bakeit1 );
+}
+
+.rounded {
+    width: 75px !important;
+    height: 75px !important;
+    border-radius: 50%;
+}
+
+.rounded2 {
+    border-radius: 25%;
+}
+
+.bakeit3 {
+    color: map-get($colors , bakeit3 );
+}
+
+.bakeit2 {
+    color: map-get($colors , bakeit2 );
+}
+
+input {
+    color: map-get($colors, bakeit3 );
+}
+
+.back-button-icon-md {
+    color:map-get($colors, bakeit3 );
+  }
+
+  .back-button-icon-ios {
+    color:map-get($colors, bakeit3 );
+  }
+
+  .back-button-icon-wp {
+    color:map-get($colors, bakeit3 );
+  }
+
