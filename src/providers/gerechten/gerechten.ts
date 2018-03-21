@@ -23,6 +23,55 @@ export class GerechtenProvider {
     console.log('Hello GerechtenProvider Provider');
   }
 
+  query(params?: any) {
+    let returnData=this.gerechten;
+    if (!params) {
+      return returnData;
+    }
+    console.log("filtering with this",params);
+
+
+
+    if(params['ingredienten'] && params['ingredienten']!==""){
+      returnData = this.gerechten.filter((item) => {
+      let heefting = false;
+      for(let ingredient of item['ingredienten']) {
+        console.log("compair", ingredient, params['ingredienten'])
+        if(params['ingredienten']==ingredient){
+          console.log("info")
+          heefting = true;
+          break;
+        }
+      }
+        if(heefting) {
+          return item
+        }
+        });
+    }
+
+    if(params['naam'] && params['naam']!==""){
+      returnData = this.gerechten.filter((item) => {
+        let itemValue = item['naam'];
+        console.log("item naam: ", params['naam']);
+        if (typeof itemValue == 'string' && (itemValue.toLowerCase().indexOf(params['naam'].toLowerCase()) >= 0)) {
+          return item;
+        } else if (itemValue == params['naam']) {
+          return item;
+        }
+      });
+    }
+    return returnData;
+  }
+
+
+  add(item: any) {
+    this.gerechten.push(item);
+  }
+
+  delete(item: any) {
+    this.gerechten.splice(this.gerechten.indexOf(item), 1);
+  }
+
   getAll() {
     return this.gerechten;
   }

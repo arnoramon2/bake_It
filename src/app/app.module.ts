@@ -20,6 +20,8 @@ import { ZoekenPage } from '../pages/zoeken/zoeken';
 import { ResultsPage } from '../pages/results/results';
 import { GerechtenPage } from '../pages/gerechten/gerechten';
 import { AccounttabsPage } from '../pages/accounttabs/accounttabs';
+import { TestPage } from '../pages/test/test';
+import { DataFilterPage } from '../pages/data-filter/data-filter';
 
 var config = {
   apiKey: "AIzaSyDezIM2Jt9z91Nez9iNTZOm8mI6A6QYiTc",
@@ -43,7 +45,9 @@ var config = {
     ResultsPage,
     GerechtDetailPage,
     GerechtenPage,
-    AccounttabsPage
+    AccounttabsPage,
+    TestPage,
+    DataFilterPage
   ],
   imports: [
     BrowserModule,
@@ -66,7 +70,9 @@ var config = {
     ResultsPage,
     GerechtDetailPage,
     GerechtenPage,
-    AccounttabsPage
+    AccounttabsPage,
+    TestPage,
+    DataFilterPage
   ],
   providers: [
     StatusBar,

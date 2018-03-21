@@ -6,10 +6,12 @@
         </button>
       <ion-title><p ion-text color="bakeit3">Home</p></ion-title>
     </ion-navbar>
-  
+
+ 
   </ion-header>
 
 <ion-content padding>
+
   <div text-center>
       <h1 class="bakeit3">Meest gekookt</h1>
       <p class="bakeit2">Ondek hier de meeste gekookte gerechten van het moment!</p>
@@ -18,7 +20,7 @@
 <div padding-vertical></div>
   <ion-list *ngFor="let item of gerechten">
 
-    <ion-grid>
+    <ion-grid>  
       <ion-row>
         <ion-col col-3>
             <img src="{{item.img}}" alt="Logo Bake It" class="rounded">

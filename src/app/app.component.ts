@@ -11,6 +11,7 @@ import { ResultsPage } from '../pages/results/results';
 import { FavorietenPage } from '../pages/favorieten/favorieten';
 import { GerechtenPage } from '../pages/gerechten/gerechten';
 import { AccounttabsPage } from '../pages/accounttabs/accounttabs';
+import { TestPage } from '../pages/test/test';
 @Component({
   templateUrl: 'app.html'
 })
@@ -57,6 +58,11 @@ export class MyApp {
     //navigate to loginpage
     this.nav.setRoot(LoginPage);
   }
+
+  test() {
+    this.nav.setRoot(TestPage);
+  }
+
 
 }
 

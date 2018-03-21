@@ -17,8 +17,8 @@ import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 })
 export class LoginPage {
   user = {
-    email: "",
-    password: ""
+    email: "ramonarno@hotmail.com",
+    password: "123456"
   }
   constructor(
     public navCtrl: NavController,

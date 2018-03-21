@@ -1,0 +1,52 @@
+<!--
+  Generated template for the TestPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar color="bakeit1">
+        <button ion-button icon-only menuToggle start>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+      <ion-title><p ion-text color="bakeit3">Test page</p></ion-title>
+    </ion-navbar>
+
+  <ion-toolbar>
+      <ion-searchbar (ionInput)="getItems($event)" placeholder="Search" [(ngModel)]="search"></ion-searchbar>
+      <ion-buttons end>
+        <button ion-button (click)="filterAdvanced()">
+          <ion-icon name="more"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list *ngFor="let item of currentItems">
+
+        <ion-grid>  
+          <ion-row>
+            <ion-col col-3>
+                <img src="{{item.img}}" alt="Logo Bake It" class="rounded">
+            </ion-col>
+            <ion-col>
+              <div text-center>
+                <h1 ion-text color="bakeit3">{{item.naam}}</h1>
+                <p class="shorten" ion-text color="light">{{item.info}}
+                  <p>
+              </div>
+            </ion-col>
+            <ion-col col-1>
+              <button ion-button clear (click)="detailGerecht(item)">
+                <ion-icon name="arrow-dropright-circle" color="bakeit3"></ion-icon>
+              </button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+    <hr>
+      </ion-list>
+</ion-content>
