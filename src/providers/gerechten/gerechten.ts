@@ -33,7 +33,7 @@ export class GerechtenProvider {
 
 
     if(params['ingredienten'] && params['ingredienten']!==""){
-      returnData = this.gerechten.filter((item) => {
+      returnData = returnData.filter((item) => {
       let heefting = false;
       for(let ingredient of item['ingredienten']) {
         console.log("compair", ingredient, params['ingredienten'])

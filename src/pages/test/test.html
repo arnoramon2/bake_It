@@ -14,10 +14,11 @@
     </ion-navbar>
 
   <ion-toolbar>
-      <ion-searchbar (ionInput)="getItems($event)" placeholder="Search" [(ngModel)]="search"></ion-searchbar>
+      <ion-searchbar color="bakeit2" (ionInput)="getItems($event)" placeholder="Search" [(ngModel)]="search"></ion-searchbar>
+
       <ion-buttons end>
         <button ion-button (click)="filterAdvanced()">
-          <ion-icon name="more"></ion-icon>
+          <ion-icon name="add"></ion-icon>
         </button>
       </ion-buttons>
     </ion-toolbar>

@@ -18,7 +18,7 @@ import { TestPage } from '../pages/test/test';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
   
-  rootPage: any = LoginPage;
+  rootPage: any = TestPage;
 
   constructor(
     platform: Platform,
