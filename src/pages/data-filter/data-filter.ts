@@ -21,6 +21,7 @@ export class DataFilterPage {
   }
 
   soorten=[]
+  soortenNew=[]
 
   constructor(
     public viewCtrl: ViewController,
@@ -36,7 +37,9 @@ export class DataFilterPage {
     this.soorten = this.gerechtenprovider.gerechten.map((item)=>{
       return item.soort;
     })
+    this.soortenNew =  Array.from(new Set(this.soorten ));
     console.log("ARNO", this.soorten)
+    console.log("ARNO2", this.soortenNew)
   }
 
   dismiss() {
