@@ -57,9 +57,10 @@ export class TestPage {
         this.currentItems= this.gerechtenprovider.query({
           ingredienten:gerechten.ingredienten,
           soort:gerechten.soort,
+          soort2:gerechten.soort2,
           naam: this.search
         });
-        console.log("filtering with",this.search,gerechten.soort,gerechten.ingredienten);
+        console.log("filtering with",this.search,gerechten.soort,gerechten.ingredienten, gerechten.soort2);
         console.log("current items after filtermodal",this.currentItems);
       }
     });

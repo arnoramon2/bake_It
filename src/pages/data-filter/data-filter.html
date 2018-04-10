@@ -18,6 +18,7 @@
   
   
   <ion-content>
+
     <ion-item>
       <ion-label>ingredienten</ion-label>
       <ion-select [(ngModel)]="filterData.ingredienten">
@@ -26,12 +27,31 @@
         <ion-option value="5kg lucht">5kg lucht</ion-option>
       </ion-select>
     </ion-item>
+
     <ion-item>
-      <ion-label>naam</ion-label>
+      <ion-label>soort 1</ion-label>
       <ion-select [(ngModel)]="filterData.soort" interface="action-sheet">
         <ion-option *ngFor="let soort of soortenNew" value="{{soort}}">{{soort}}</ion-option>
       </ion-select>
     </ion-item>
+
+
+    <ion-item>
+        <ion-label>soort 2</ion-label>
+        <ion-select [(ngModel)]="filterData.soort2" interface="action-sheet">
+          <ion-option *ngFor="let soort of soortenNew" value="{{soort}}">{{soort}}</ion-option>
+        </ion-select>
+      </ion-item>
+
+
+      
+    <ion-item *ngFor="let soort of soortenNew" [attr.soort]="soort">
+      <ion-label>{{soort}}</ion-label>
+      <ion-toggle [(ngModel)]="filterData.soort"></ion-toggle>
+    </ion-item>
+    
+
+
     <ion-item>
       <button ion-button full (click)="dismiss()">Filter</button>
     </ion-item>

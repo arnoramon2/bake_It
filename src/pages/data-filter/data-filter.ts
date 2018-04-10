@@ -17,7 +17,8 @@ import { GerechtenProvider } from '../../providers/gerechten/gerechten';
 export class DataFilterPage {
   filterData={
     ingredienten:"",
-    soort:""
+    soort:"",
+    soort2:""
   }
 
   soorten=[]
@@ -38,12 +39,9 @@ export class DataFilterPage {
       return item.soort;
     })
     this.soortenNew =  Array.from(new Set(this.soorten ));
-    console.log("ARNO", this.soorten)
-    console.log("ARNO2", this.soortenNew)
   }
 
   dismiss() {
-    console.log("dismissing filtermodal with data!!!",this.filterData);
     this.viewCtrl.dismiss(this.filterData);
   }
   cancel(){

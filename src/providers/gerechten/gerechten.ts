@@ -19,6 +19,7 @@ export class GerechtenProvider {
   ]
 
 
+
   constructor() {
     console.log('Hello GerechtenProvider Provider');
   }
@@ -30,7 +31,13 @@ export class GerechtenProvider {
     }
     console.log("filtering with this",params);
 
-
+    if(params['soort']!=="" || params['soort2']!==""){
+      returnData = returnData.filter((item) => {
+        if(params['soort']==item['soort'] || params['soort2']==item['soort']){
+          return item;
+        }
+      });
+    }
 
     if(params['ingredienten'] && params['ingredienten']!==""){
       returnData = returnData.filter((item) => {
@@ -47,16 +54,6 @@ export class GerechtenProvider {
           return item
         }
         });
-    }
-
-
-    if(params['soort']!==""){
-      returnData = returnData.filter((item) => {
-        if(params['soort']==item['soort']){
-          return item;
-          console.log("hey");
-        }
-      });
     }
 
 /*
@@ -90,9 +87,9 @@ export class GerechtenProvider {
         }
       });
     }
+ 
     return returnData;
   }
-
 
   add(item: any) {
     this.gerechten.push(item);
