@@ -17,10 +17,10 @@ import { GerechtenProvider } from '../../providers/gerechten/gerechten';
 export class DataFilterPage {
   filterData={
     ingredienten:"",
-    naam:""
+    soort:""
   }
 
-  naam=[]
+  soorten=[]
 
   constructor(
     public viewCtrl: ViewController,
@@ -33,13 +33,14 @@ export class DataFilterPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad DataFilterPage');
 
-    this.naam = this.gerechtenprovider.gerechten.map((item)=>{
-      return item.naam;
+    this.soorten = this.gerechtenprovider.gerechten.map((item)=>{
+      return item.soort;
     })
+    console.log("ARNO", this.soorten)
   }
 
   dismiss() {
-    console.log("dismissing filtermodal with data",this.filterData);
+    console.log("dismissing filtermodal with data!!!",this.filterData);
     this.viewCtrl.dismiss(this.filterData);
   }
   cancel(){
