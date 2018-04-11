@@ -22,6 +22,7 @@ import { GerechtenPage } from '../pages/gerechten/gerechten';
 import { AccounttabsPage } from '../pages/accounttabs/accounttabs';
 import { TestPage } from '../pages/test/test';
 import { DataFilterPage } from '../pages/data-filter/data-filter';
+import { CreatePage } from '../pages/create/create';
 import { FireDataServiceProvider } from '../providers/fire-data-service/fire-data-service';
 
 var config = {
@@ -48,7 +49,8 @@ var config = {
     GerechtenPage,
     AccounttabsPage,
     TestPage,
-    DataFilterPage
+    DataFilterPage,
+    CreatePage
   ],
   imports: [
     BrowserModule,
@@ -73,7 +75,8 @@ var config = {
     GerechtenPage,
     AccounttabsPage,
     TestPage,
-    DataFilterPage
+    DataFilterPage,
+    CreatePage
   ],
   providers: [
     StatusBar,

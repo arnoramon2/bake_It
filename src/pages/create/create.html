@@ -1,0 +1,58 @@
+<!--
+  Generated template for the CreatePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>create</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+
+      <ion-item>
+        <ion-label floating>description</ion-label>
+        <ion-input type="text" [(ngModel)]="gerecht.description"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label>Kind</ion-label>
+          <ion-select [(ngModel)]="gerecht.kind">
+            <ion-option value="pasta">Pasta</ion-option>
+            <ion-option value="kip">kip gerecht</ion-option>
+            <ion-option value="vegan">vegan</ion-option>
+          </ion-select>
+        </ion-item>
+
+      <ion-item>
+          <ion-label floating>name</ion-label>
+          <ion-input type="text" [(ngModel)]="gerecht.name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label floating>preparation</ion-label>
+          <ion-input type="text" [(ngModel)]="gerecht.preparation"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label floating>ingredients</ion-label>
+          <ion-input type="text" [(ngModel)]="gerecht.ingredients"></ion-input>
+      </ion-item>
+
+
+
+      <ion-item>
+          <ion-label floating>img</ion-label>
+          <ion-input type="text" [(ngModel)]="gerecht.img"></ion-input>
+      </ion-item>
+        
+
+    </ion-list>
+    <button ion-button full color="third" (click)="create()">create</button>
+</ion-content>

@@ -56,25 +56,7 @@ export class GerechtenProvider {
         });
     }
 
-/*
-    if(params['soort'] && params['soort']!==""){
-      returnData = returnData.filter((item) => {
-      let heefting = false;
-      for(let soort of item['soort']) {
-        console.log("ARNO!", soort);
-        //console.log("compair2", soort, params['soort']);
-        if(params['soort']==soort){
-          console.log("info2")
-          heefting = true;
-          break;
-        }
-      }
-        if(heefting) {
-          return item
-        }
-        });
-    }
-*/
+
 
     if(params['naam'] && params['naam']!==""){
       returnData = this.gerechten.filter((item) => {

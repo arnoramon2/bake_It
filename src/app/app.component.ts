@@ -12,6 +12,7 @@ import { FavorietenPage } from '../pages/favorieten/favorieten';
 import { GerechtenPage } from '../pages/gerechten/gerechten';
 import { AccounttabsPage } from '../pages/accounttabs/accounttabs';
 import { TestPage } from '../pages/test/test';
+import { CreatePage } from '../pages/create/create';
 @Component({
   templateUrl: 'app.html'
 })
@@ -61,6 +62,10 @@ export class MyApp {
 
   test() {
     this.nav.setRoot(TestPage);
+  }
+
+  create() {
+    this.nav.setRoot(CreatePage);
   }
 
 

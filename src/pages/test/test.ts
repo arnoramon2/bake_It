@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 import { GerechtenProvider } from '../../providers/gerechten/gerechten';
 import { DataFilterPage } from '../data-filter/data-filter';
+import { FireDataServiceProvider } from '../../providers/fire-data-service/fire-data-service';
 
 /**
  * Generated class for the TestPage page.
@@ -25,7 +26,8 @@ export class TestPage {
     public navCtrl: NavController, 
     public navParams: NavParams,
     public gerechtenprovider: GerechtenProvider,
-    private modalCtrl:ModalController
+    private modalCtrl:ModalController,
+    private db: FireDataServiceProvider
   ) {
     this.gerechten = gerechtenprovider.getAll();
   }
@@ -33,7 +35,18 @@ export class TestPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad TestPage');
 
-    this.currentItems = this.gerechtenprovider.gerechten;
+   
+    this.gerechten=this.db.getAll();
+
+    this.gerechten.subscribe((result) => {
+      console.log("We got the following data", result);
+      this.currentItems = result;
+      console.log("ARNO1", this.currentItems)
+    },(error) => {
+      console.log("We did not get anny data", error)
+    });
+
+    
   }
 
   getItems(ev) {
@@ -41,7 +54,7 @@ export class TestPage {
     let val = ev.target.value;
     if (!val || !val.trim()) {
       console.log("no naam filter");
-      this.currentItems = this.gerechtenprovider.gerechten;
+      this.currentItems = this.gerechten;
       return;
     }
     this.currentItems = this.gerechtenprovider.query({
