@@ -22,14 +22,15 @@ import { GerechtenPage } from '../pages/gerechten/gerechten';
 import { AccounttabsPage } from '../pages/accounttabs/accounttabs';
 import { TestPage } from '../pages/test/test';
 import { DataFilterPage } from '../pages/data-filter/data-filter';
+import { FireDataServiceProvider } from '../providers/fire-data-service/fire-data-service';
 
 var config = {
-  apiKey: "AIzaSyDezIM2Jt9z91Nez9iNTZOm8mI6A6QYiTc",
-  authDomain: "bakeit-8f1f0.firebaseapp.com",
-  databaseURL: "https://bakeit-8f1f0.firebaseio.com",
-  projectId: "bakeit-8f1f0",
-  storageBucket: "bakeit-8f1f0.appspot.com",
-  messagingSenderId: "886438639175"
+  apiKey: "AIzaSyCnawbfNceMc5_W9RFJRuiXtF-Z1W3TMhY",
+  authDomain: "bakeit2-2b386.firebaseapp.com",
+  databaseURL: "https://bakeit2-2b386.firebaseio.com",
+  projectId: "bakeit2-2b386",
+  storageBucket: "",
+  messagingSenderId: "177493577853"
 };
 // ** Firebase **
 
@@ -79,7 +80,9 @@ var config = {
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     AuthServiceProvider,
-    GerechtenProvider
+    GerechtenProvider,
+    FireDataServiceProvider,
+    FireDataServiceProvider
   ]
 })
 export class AppModule { }

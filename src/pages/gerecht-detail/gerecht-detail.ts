@@ -15,13 +15,20 @@ import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
   templateUrl: 'gerecht-detail.html',
 })
 export class GerechtDetailPage {
-gerechten: any; 
+item: any; 
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
     public authService: AuthServiceProvider
   ) {
-    this.gerechten=navParams.data;
+    //this.gerechten=navParams.data;
+    console.log("navigate with navparams",navParams);
+    if(navParams.data){
+      this.item = navParams.data
+    } else {
+      "navigated to without params"
+    }
+
   }
 
   ionViewDidLoad() {
@@ -29,7 +36,7 @@ gerechten: any;
   }
 
   favorieten(){
-    this.authService.presentToast(this.gerechten.naam + " is toegevoegd aan je favorieten");
+    this.authService.presentToast(this.item.name + " is toegevoegd aan je favorieten");
   }
 
 }

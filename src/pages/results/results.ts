@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { GerechtenProvider } from '../../providers/gerechten/gerechten';
+//import { GerechtenProvider } from '../../providers/gerechten/gerechten';
 import { GerechtDetailPage } from '../gerecht-detail/gerecht-detail';
 import { ZoekenPage } from '../zoeken/zoeken';
+import { FireDataServiceProvider } from '../../providers/fire-data-service/fire-data-service';
 
 /**
  * Generated class for the ResultsPage page.
@@ -23,17 +24,29 @@ export class ResultsPage {
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
-    public gerechtenProvider: GerechtenProvider
+    //public gerechtenProvider: GerechtenProvider
+    private db: FireDataServiceProvider
   ) {
-    this.gerechten = gerechtenProvider.getAll();
+    //this.gerechten = gerechtenProvider.getAll();
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ResultsPage');
+
+    this.gerechten=this.db.getAll();
+
+    this.gerechten.subscribe((result) => {
+      console.log("We got the following data", result);
+    },(error) => {
+      console.log("We did not get anny data", error)
+    });
   }
 
-  detailGerecht(item : any) {
-    this.navCtrl.push(GerechtDetailPage, item);
+  detailGerecht(event, item) {
+    //this.navCtrl.push(GerechtDetailPage, item);
+
+    console.log("tapped item", item);
+    this.navCtrl.push(GerechtDetailPage, item)
   }
 
   zoeken() {

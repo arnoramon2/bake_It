@@ -16,22 +16,22 @@
   </div>
 
   <div padding-vertical></div>
-  <ion-list *ngFor="let item of gerechten">
+  <ion-list *ngFor="let item of gerechten | async">
 
-    <ion-grid>
+    <ion-grid>  
       <ion-row>
         <ion-col col-3>
             <img src="{{item.img}}" alt="Logo Bake It" class="rounded">
         </ion-col>
         <ion-col>
           <div text-center>
-            <h1 ion-text color="bakeit3">{{item.naam}}</h1>
-            <p class="shorten" ion-text color="light">{{item.info}}
+            <h1 ion-text color="bakeit3">{{item.name}}</h1>
+            <p class="shorten" ion-text color="light">{{item.description}}
               <p>
           </div>
         </ion-col>
         <ion-col col-1>
-          <button ion-button clear (click)="detailGerecht(item)">
+          <button ion-button clear (click)="detailGerecht($event, item)">
             <ion-icon name="arrow-dropright-circle" color="bakeit3"></ion-icon>
           </button>
         </ion-col>

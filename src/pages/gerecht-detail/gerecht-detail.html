@@ -4,7 +4,7 @@
         <button ion-button icon-only menuToggle start>
             <ion-icon name="menu"></ion-icon>
         </button>
-      <ion-title><p ion-text color="bakeit3">{{gerechten.naam}}</p></ion-title>
+      <ion-title><p ion-text color="bakeit3">{{item.name}}</p></ion-title>
     </ion-navbar>
   
   </ion-header>
@@ -12,27 +12,27 @@
 
 <ion-content padding>
   <div text-center>
-    <h1 class="bakeit3">{{gerechten.naam}}</h1>
+    <h1 class="bakeit3">{{item.name}}</h1>
   
-  <img src="{{gerechten.img}}" alt="{{gerechten.naam}}" class="rounded2">
+  <img src="{{item.img}}" alt="{{item.name}}" class="rounded2">
   <ion-fab right top>
       <button ion-fab (click)=favorieten()>
         <ion-icon name="star"></ion-icon>
       </button>
     </ion-fab>
-  <p class="bakeit2">{{gerechten.info}}</p>
+  <p class="bakeit2">{{item.description}}</p>
 </div>
   <div padding-vertical></div>
   <div text-center>
       <h1 class="bakeit3">Benodigde ingrediënten:</h1>
     </div>    
-      <ion-item class="content" *ngFor="let item of gerechten.ingredienten"> <ion-icon name="basket" color="bakeit3"></ion-icon> {{item}}</ion-item>
+      <ion-item class="content"*ngFor="let item of item.ingredients" > <ion-icon name="basket" color="bakeit3"></ion-icon> {{item}}</ion-item>
 
       <div padding-vertical></div>
       <div text-center>
           <h1 class="bakeit3">Bereiding:</h1>
           
-        <p ion-text color="light">{{gerechten.bereiding}}</p>
+        <p ion-text color="light">{{item.preparation}}</p>
       </div> 
 
 
